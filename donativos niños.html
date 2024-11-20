@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ayudas humanitarias</title>
     <style>
-        body {
-            font-family: 'Times New Roman', sans-serif;
-            background-color: #e6f7ff; /* Light Cyan */
-            margin: 0;
-            padding: 0;
-            color: #333;
-        }
-        .container {
+body {
+    font-family: 'Times New Roman', sans-serif;
+    background-color: #e6f7ff; /* Light Cyan */
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+.container {
             max-width: 600px;
             margin: 20px auto;
             padding: 30px;
@@ -77,6 +77,41 @@
         #form-container {
             display: block;
         }
+        .footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    flex: 1;
+    margin: 10px;
+}
+
+.footer-section h2 {
+    margin-bottom: 10px;
+}
+
+.footer-section p {
+    margin: 5px 0;
+}
+
+.footer a {
+    color: #7AB2D3;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
     </style>
     <script>
         function mostrarGif(event) {

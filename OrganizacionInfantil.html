@@ -6,9 +6,40 @@
     <title>Conexion -Donaciones para un Mejor Futuro</title>
     <link rel="stylesheet" href="Style.css">
     <style>
-        /* Tu CSS aquí */
+        
+header {
+    background-color: #f598bc;
+    color: white;
+    padding: 1rem 0;
+}
+.header {
+  display: flex;
+  align-items: center;
+  background-color: #f8b9cc; /* Color rosa del fondo */
+  padding: 10px;
+}
+
+.logo {
+  height: 100px; /* Ajusta el tamaño según sea necesario */
+  margin-right: 1px; /* Espacio entre la imagen y el texto */
+}
+
+.header h1 {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: white; /* Ajusta el color del texto */
+}
+
+
         body{
-            margin: 0; padding: 0; font-family: Arial, sans-serif; background-image: url('niños.jpg'); /* Ruta a tu imagen de fondo */ background-size: cover; /* La imagen ocupa todo el tamaño de la página */ background-attachment: fixed; /* La imagen está fijada al fondo */ background-position: center; /* Centra la imagen */ background-repeat: no-repeat; /* No repite la imagen */
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('niños.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
         }
         .section {
             padding: 20px;
@@ -18,7 +49,14 @@
             max-width: 1200px;
             margin: 0 auto;
         }
-
+        .contenedor {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            color: rgb(3, 3, 3);
+            padding: 20px;
+            border-radius: 10px;
+        }
         .project-list {
             display: flex;
             justify-content: space-between;
@@ -53,13 +91,48 @@
                 width: 100%;
             }
         }
-            
+        .btn {
+    background-color: #f598bc;
+    color: white;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 1rem;
+}
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    flex: 1;
+    margin: 10px;
+}
+
+.footer-section h2 {
+    margin-bottom: 10px;
+}
+
+.footer-section p {
+    margin: 5px 0;
+}
+
+.footer a {
+    color: #7AB2D3;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
     </style>
 </head>
 <body>
     <header>
         <div class="container">
-            <h1>Pequeños Pasos, Grandes Cambios</h1>
+            <h1><img src="logo.png" alt="logo" class="logo">Pequeños Pasos, Grandes Cambios </h1>
             <nav>
                 <ul>
                     <li><a href="#about">Sobre Nosotros</a></li>
@@ -73,7 +146,7 @@
     
     <main>
         <section id="about" class="section">
-            <div class="container">
+            <div class="contenedor">
                 <h2>Sobre Nosotros</h2>
                 <p>Somos una organización dedicada al cuidado y bienestar de los niños. Nuestra misión es proporcionar un entorno seguro y enriquecedor donde los niños puedan crecer y desarrollarse plenamente. Con un equipo de profesionales comprometidos, ofrecemos programas educativos y recreativos que promueven el crecimiento físico, emocional y social de los niños. Creemos en la importancia de crear una comunidad inclusiva y solidaria donde cada niño tenga la oportunidad de prosperar.</p>                
             </div>
@@ -93,8 +166,12 @@
         
         <section id="projects" class="section">
             <div class="container">
-                <h2>Proyectos</h2>
-                <p>Descubre los proyectos que estamos apoyando y cómo tus donaciones están marcando la diferencia. Juntos, estamos creando un impacto positivo en nuestras comunidades.</p>
+                <div class="contenedor">
+                   <h2>Proyectos</h2>
+                   <p>Descubre los proyectos que estamos apoyando y cómo tus donaciones están marcando la diferencia. Juntos, estamos creando un impacto positivo en nuestras comunidades.</p> 
+                </div>
+                <br>
+                <br>
                 <div class="project-list">
                     <div class="project">
                         <h3>Educación para Todos</h3>
@@ -112,10 +189,10 @@
         
         
         <section id="donate">
-            <div class="container">
+            <div class="contenedor">
                 <h2>Ayúdanos a Hacer la Diferencia</h2>
                 <p>Con tu apoyo, podemos cambiar vidas y construir un futuro mejor para todos.</p>
-                <a href="#donate" class="btn">Haz una Donación</a>
+                <a href="donativos niños.html" class="btn">Haz una Donación</a>
             </div>
         </section>
         <br>
@@ -123,7 +200,7 @@
 
     </main>
 
-    <footer id="contacto" class="footer"> 
+    <footer id="contact" class="footer"> 
         <div class="footer-content">
             <div class="footer-section about">
                 <h2>Acerca de Nosotros</h2>
