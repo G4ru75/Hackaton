@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ayudas humanitarias</title>
     <style>
-body {
-    font-family: 'Times New Roman', sans-serif;
-    background-color: #e6f7ff; /* Light Cyan */
-    margin: 0;
-    padding: 0;
-    color: #333;
-}
-.container {
+        body {
+            font-family: 'Times New Roman', sans-serif;
+            background-color: #e6f7ff; 
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        .container {
             max-width: 600px;
             margin: 20px auto;
             padding: 30px;
@@ -22,13 +22,13 @@ body {
         }
         h1 {
             text-align: center;
-            color: #4682b4; /* Steel Blue */
+            color: #4682b4; 
         }
         label {
             display: block;
             margin: 10px 0 5px;
             font-weight: bold;
-            color: #2e8b57; /* Sea Green */
+            color: #2e8b57; 
         }
         input, textarea, select {
             width: 97%;
@@ -38,98 +38,88 @@ body {
             border-radius: 4px;
         }
         input[type="submit"] {
-            background-color: #3cb371; /* Medium Sea Green */
+            background-color: #3cb371;
             color: white;
             border: none;
             cursor: pointer;
         }
         input[type="submit"]:hover {
-            background-color: #2e8b57; /* Sea Green */
+            background-color: #2e8b57; 
         }
         fieldset {
-            border: 1px solid #4682b4; /* Steel Blue */
+            border: 1px solid #4682b4; 
             border-radius: 8px;
             padding: 10px;
         }
         legend {
-            color: #4682b4; /* Steel Blue */
+            color: #4682b4; 
         }
-
-        /* Estilo para el GIF superpuesto */
         #overlay {
-            display: none; /* Oculto por defecto */
+            display: none; 
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro */
+            background-color: rgba(0, 0, 0, 0.8);
             z-index: 9999;
             justify-content: center;
             align-items: center;
         }
-
         #overlay img {
             max-width: 80%;
             max-height: 80%;
         }
-
         #form-container {
             display: block;
         }
         .footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    width: 100%;
-}
-
-.footer-content {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-
-.footer-section {
-    flex: 1;
-    margin: 10px;
-}
-
-.footer-section h2 {
-    margin-bottom: 10px;
-}
-
-.footer-section p {
-    margin: 5px 0;
-}
-
-.footer a {
-    color: #7AB2D3;
-    text-decoration: none;
-}
-
-.footer a:hover {
-    text-decoration: underline;
-}
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            width: 100%;
+        }
+        .footer-content {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .footer-section {
+            flex: 1;
+            margin: 10px;
+        }
+        .footer-section h2 {
+            margin-bottom: 10px;
+        }
+        .footer-section p {
+            margin: 5px 0;
+        }
+        .footer a {
+            color: #7AB2D3;
+            text-decoration: none;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
     </style>
     <script>
         function mostrarGif(event) {
-            event.preventDefault(); // Previene el envío del formulario y recarga de página
+            event.preventDefault(); 
 
-            // Oculta el formulario
+            
             const formContainer = document.getElementById("form-container");
             formContainer.style.display = "none";
 
-            // Muestra el GIF
+           
             const overlay = document.getElementById("overlay");
             overlay.style.display = "flex";
 
             // Simula el proceso y recarga la página después de mostrar el GIF
             setTimeout(() => {
                 alert("Su donación ha sido exitosa. ¡Gracias por su generosidad!");
-                location.reload(); // Recarga la página
-            }, 3000); // 3 segundos
+                location.reload(); 
+            }, 3000); 
         }
     </script>
 </head>
@@ -175,7 +165,8 @@ body {
     <div id="overlay">
         <img src="gracias-thanks.gif" alt="Procesando donación...">
     </div>
-    <footer id="contacto" class="footer"> 
+
+    <footer id="contacto" class="footer">
         <div class="footer-content">
             <div class="footer-section about">
                 <h2>Acerca de Nosotros</h2>
@@ -203,6 +194,6 @@ body {
                 </p>
             </div>
         </div>
-    </footer>
+    </footer>
 </body>
 </html>
