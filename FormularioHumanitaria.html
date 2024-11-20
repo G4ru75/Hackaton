@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayudas Humanitarias</title>
+    <link rel="stylesheet" href="FH.css">
+    <script></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Formulario de Donaciones</h1>
+        <form onsubmit="mostrarMensajeExito(event)">
+            <fieldset>
+                <legend>Información Personal</legend>
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required placeholder="Escriba su nombre" minlength="4" maxlength="50" pattern="[A-Za-z\s]+">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required placeholder="Escriba su email">
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" id="telefono" name="telefono" required placeholder="Escriba su teléfono" pattern="[0-9]+">
+            </fieldset>
+
+            <fieldset>
+                <legend>Información de Donación</legend>
+                <label for="monto">Monto a Donar (en COP):</label>
+                <input type="number" id="monto" name="monto" placeholder="Escriba el monto" min="100" required>
+                <label for="metodo-pago">Método de Pago:</label>
+                <div class="custom-select">
+                    <div class="select-selected">
+                        <span>Seleccione un método de pago</span>
+                    </div>
+                    <div class="select-items">
+                        <div><img src="mastercard.png" class="icon" alt="Tarjeta de Crédito">Tarjeta de Crédito</div>
+                        <div><img src="nequi.jpg" class="icon" alt="Transferencia Bancaria">Transferencia Bancaria</div>
+                        <div><img src="paypal.jpg" class="icon" alt="PayPal">PayPal</div>
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Mensaje</legend>
+                <label for="mensaje">Mensaje para la Beneficencia:</label>
+                <textarea id="mensaje" name="mensaje"  placeholder="Escriba su mensaje" rows="4"></textarea>
+            </fieldset>
+
+            <input type="submit" value="Donar">
+        </form>
+    </div>
+    <br>
+    <br>
+    <footer id="contacto" class="footer"> 
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h2>Acerca de Nosotros</h2>
+                <p>Somos una organización dedicada a proporcionar educación y recursos esenciales a comunidades desfavorecidas, creando oportunidades de crecimiento y desarrollo sostenible.</p>
+            </div>
+            <div class="footer-section contact">
+                <h2>Contacto</h2>
+                <p>&copy; 2024 Mi Página Web. Todos los derechos reservados.</p>
+                <p>Correo Electrónico: <a href="mailto:sebastianfm738@gmail.com">OrganizacionHumanitaria@gmail.com</a></p>
+                <p>Teléfono: +57 320 782 3313</p>
+                <p>Dirección: Calle humana 123, Valledupar, Colombia</p>
+            </div>
+            <div class="footer-section social">
+                <h2>Síguenos</h2>
+                <p>
+                    <a href="https://facebook.com/TuOrganizacion">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" width="30" height="30">
+                    </a>
+                    <a href="https://x.com/TuOrganizacion">
+                        <img src="logo_x.jpg" alt="X" width="30" height="30">
+                    </a>
+                    <a href="https://instagram.com/isxtanic">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" width="30" height="30">
+                    </a>
+                </p>
+            </div>
+        </div>
+    </footer>
+    <script src="FH.js"></script>
+</body>
+</html>

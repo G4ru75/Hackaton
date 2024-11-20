@@ -1,0 +1,135 @@
+body {
+    font-family: 'Times New Roman', sans-serif;
+    background-color: #e6f7ff; /* Light Cyan */
+    margin: 0;
+    padding: 20px;
+    color: #333;
+}
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+h1 {
+    text-align: center;
+    color: #4682b4; /* Steel Blue */
+}
+label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+    color: #2e8b57; /* Sea Green */
+}
+input, textarea, .custom-select {
+    width: 97%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+input[type="submit"] {
+    background-color: #3cb371; /* Medium Sea Green */
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+input[type="submit"]:hover {
+    background-color: #2e8b57; /* Sea Green */
+}
+fieldset {
+    border: 1px solid #4682b4; /* Steel Blue */
+    border-radius: 8px;
+    padding: 10px;
+}
+legend {
+    color: #4682b4; /* Steel Blue */
+}
+.custom-select {
+    position: relative;
+}
+.custom-select select {
+    display: none; /* Esconder el select original */
+}
+.select-items {
+    position: absolute;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    width: 100%;
+    z-index: 1000;
+    display: none; /* Inicialmente oculto */
+}
+.select-items div {
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+.select-items div:hover {
+    background-color: #f1f1f1;
+}
+.select-selected {
+    background-color: #e6f7ff;
+    padding: 10px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+}
+.select-selected:hover {
+    background-color: #d4e6f1;
+}
+.select-selected::after {
+    content: "";
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-color: #333 transparent transparent transparent;
+}
+.same-as-selected {
+    background-color: #d4e6f1;
+}
+.icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+.footer {
+background-color: #333;
+color: white;
+text-align: center;
+padding: 20px;
+width: 100%;
+}
+
+.footer-content {
+display: flex;
+justify-content: space-around;
+flex-wrap: wrap;
+}
+
+.footer-section {
+flex: 1;
+margin: 10px;
+}
+
+.footer-section h2 {
+margin-bottom: 10px;
+}
+
+.footer-section p {
+margin: 5px 0;
+}
+
+.footer a {
+color: #7AB2D3;
+text-decoration: none;
+}
+
+.footer a:hover {
+text-decoration: underline;
+}

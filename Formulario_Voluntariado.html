@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscripcion al voluntariado</title>
+    <link rel="stylesheet" href="FV.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Inscripcion al voluntariado</h1>
+        <form id="Voluntarios">
+            <fieldset>
+                <legend>Información Personal</legend>
+                <label for="nombre">Nombre(s) y Apellidos:</label>
+                <input type="text" id="nombre" name="nombre" required placeholder="Escriba su nombre" minlength="4" maxlength="50" pattern="[A-Za-z\s]+">
+                
+                <label for="direccion">Dirección:</label>
+                <input type="text" id="direccion" name="direccion" required placeholder="Escriba su dirección">
+                
+                <label for="lugar-nacimiento">Lugar de residencia:</label>
+                <input type="text" id="lugar-nacimiento" name="lugar-nacimiento" required placeholder="Escriba su lugar de residencia">
+                
+                <label for="fecha-nacimiento">Fecha de Nacimiento:</label>
+                <input type="date" id="fecha-nacimiento" name="fecha-nacimiento" required>
+                
+                <label for="tipo-documento">Tipo de Documento:</label>
+                <select id="tipo-documento" name="tipo-documento" required>
+                    <option value="">Seleccione un tipo de documento</option>
+                    <option value="CC">Cédula de Ciudadanía</option>
+                    <option value="TI">Tarjeta de Identidad</option>
+                    <option value="PP">Pasaporte</option>
+                </select> 
+                <label for="numero-documento">Número de Documento:</label>
+                <input type="text" id="numero-documento" name="numero-documento" required placeholder="Escriba su número de documento" pattern="[0-9]+">
+                            <div id="uploadForm">
+                                <fieldset>
+                                    <legend>Subir Documento</legend>
+                                    <label for="documento">Subir documento de Identidad (PDF):</label>
+                                    <input type="file" id="documento" name="documento" accept=" .pdf" required>
+                                </fieldset> 
+                            </div>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required placeholder="Escriba su email">
+                
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" id="telefono" name="telefono" required placeholder="Escriba su teléfono" pattern="[0-9]+">
+                
+                <label for="ocupacion">Ocupación:</label>
+                <select id="ocupacion" name="ocupacion" required onchange="mostrarSeccionOcupacion()">
+                    <option value="">Seleccione su ocupación</option>
+                    <option value="estudiante">Estudiante</option>
+                    <option value="trabaja">Trabaja</option>
+                    <option value="otra">Otra</option>
+                </select>
+            </fieldset>
+
+            <div class="flex-container">
+                <fieldset id="info-estudiante" class="oculto">
+                    <legend>Información del Estudiante</legend>
+                    <label for="universidad">Universidad:</label>
+                    <input type="text" id="universidad" name="universidad" placeholder="Escriba el nombre de su universidad">
+                    
+                    <label for="carrera">Carrera:</label>
+                    <input type="text" id="carrera" name="carrera" placeholder="Escriba su carrera">
+                    
+                    <label for="semestre">Semestre:</label>
+                    <input type="number" id="semestre" name="semestre" placeholder="Escriba su semestre" min="1" max="10">
+                </fieldset>
+
+                <fieldset id="info-trabaja" class="oculto">
+                    <legend>Información del Trabajo</legend>
+                    <label for="horas-libres">Horas Libres:</label>
+                    <input type="text" id="horas-libres" name="horas-libres" placeholder="Escriba sus horas libres">
+                </fieldset>
+            </div>
+
+            <fieldset id="info-otra-ocupacion" class="oculto">
+                <legend>Otra Ocupación</legend>
+                <label for="otra-ocupacion">Describa su ocupación:</label>
+                <textarea id="otra-ocupacion" name="otra-ocupacion" placeholder="Describa su ocupación" rows="4"></textarea>
+            </fieldset>
+                        <fieldset>
+                            <legend>Experiencia de Voluntariado</legend>
+                            <label for="voluntariado">¿Tiene experiencia de voluntariado?</label>
+                            <select id="voluntariado" name="voluntariado" required onchange="mostrarSeccionVoluntariado()">
+                                <option value="">Seleccione su respuesta</option>
+                                <option value="si">Sí</option>
+                                <option value="no">No</option>
+                            </select>
+                            
+                            <div id="info-voluntariado" class="oculto">
+                                <label for="tiempo-voluntariado">¿Cuánto tiempo?</label>
+                                <input type="text" id="tiempo-voluntariado" name="tiempo-voluntariado" placeholder="Escriba el tiempo">
+                                
+                                <label for="lugar-voluntariado">¿Dónde?</label>
+                                <input type="text" id="lugar-voluntariado" name="lugar-voluntariado" placeholder="Escriba el lugar">
+                                
+                                <label for="conocimiento-voluntariado">¿Cómo se enteró de este voluntariado?</label>
+                                <input type="text" id="conocimiento-voluntariado" name="conocimiento-voluntariado" placeholder="Escriba cómo se enteró">
+                            </div>
+                        </fieldset>            
+            <fieldset>
+                <legend>Observaciones</legend>
+                <label for="mensaje">Observaciones</label>
+                <textarea id="mensaje" name="mensaje" placeholder="Alguna consulta, queja, reclamo o idea" rows="4"></textarea>
+            </fieldset>
+
+            <input type="submit" value="Ser voluntario">
+            <button type="button" id="guardarArchivo">Guardar en archivo</button>
+        </form>
+
+        <div id="ContenedorVoluntarios">
+            <h2>Voluntarios registrados actualmente: <span id="ContadorVoluntarios">0</span></h2>
+            <ul id="ListaVoluntarios">
+
+            </ul>
+        </div>
+    </div>
+    <br>
+    <br>
+    <footer id="contacto" class="footer"> 
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h2>Acerca de Nosotros</h2>
+                <p>Somos una organización dedicada a proporcionar educación y recursos esenciales a comunidades desfavorecidas, creando oportunidades de crecimiento y desarrollo sostenible.</p>
+            </div>
+            <div class="footer-section contact">
+                <h2>Contacto</h2>
+                <p>&copy; 2024 Mi Página Web. Todos los derechos reservados.</p>
+                <p>Correo Electrónico: <a href="mailto:dairodu123@gmail.com">OrganizacionVoluntariados@gmail.com</a></p>
+                <p>Teléfono: +57 320 782 3313</p>
+                <p>Dirección: Calle Voluntarios 123, Valledupar, Colombia</p>
+            </div>
+            <div class="footer-section social">
+                <h2>Síguenos</h2>
+                <p>
+                    <a href="https://facebook.com/TuOrganizacion">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" width="30" height="30">
+                    </a>
+                    <a href="https://x.com/TuOrganizacion">
+                        <img src="logo_x.jpg" alt="X" width="30" height="30">
+                    </a>
+                    <a href="https://instagram.com/TuOrganizacion">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" width="30" height="30">
+                    </a>
+                </p>
+            </div>
+        </div>
+    </footer>
+    <script src="FV.js"></script>
+</body>
+</html>
