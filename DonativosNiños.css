@@ -1,0 +1,107 @@
+body {
+    font-family: 'Times New Roman', sans-serif;
+    background-color: #e6f7ff; /* Light Cyan */
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+.container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 30px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #4682b4; /* Steel Blue */
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            font-weight: bold;
+            color: #2e8b57; /* Sea Green */
+        }
+        input, textarea, select {
+            width: 97%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input[type="submit"] {
+            background-color: #3cb371; /* Medium Sea Green */
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #2e8b57; /* Sea Green */
+        }
+        fieldset {
+            border: 1px solid #4682b4; /* Steel Blue */
+            border-radius: 8px;
+            padding: 10px;
+        }
+        legend {
+            color: #4682b4; /* Steel Blue */
+        }
+
+        /* Estilo para el GIF superpuesto */
+        #overlay {
+            display: none; /* Oculto por defecto */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro */
+            z-index: 9999;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #overlay img {
+            max-width: 80%;
+            max-height: 80%;
+        }
+
+        #form-container {
+            display: block;
+        }
+        .footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    flex: 1;
+    margin: 10px;
+}
+
+.footer-section h2 {
+    margin-bottom: 10px;
+}
+
+.footer-section p {
+    margin: 5px 0;
+}
+
+.footer a {
+    color: #7AB2D3;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}

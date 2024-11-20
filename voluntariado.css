@@ -1,0 +1,229 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #87CEEB; /* Azul claro */
+    color: white;
+    padding: 1rem 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+header .logo {
+    width: 150px; /* Ajusta el tamaño del logo */
+    height: auto;
+    margin-right: 3rem; /* Espaciado entre el logo y el texto */
+}
+
+header h1 {
+    font-size: 28px;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 1;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 2rem;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: 'Arial', sans-serif;
+    font-size: 18px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    padding: 0.3rem 0rem;
+    border-radius: 5px;
+}
+
+nav ul li a:hover {
+    color: #87CEEB; /* Azul claro para el texto */
+    background-color: white; /* Fondo blanco en hover */
+}
+
+
+
+
+#Intrduccion {
+    background-color: #f4f4f4; /* Color de fondo suave */
+    padding: 40px 20px; /* Espaciado alrededor del contenido */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    font-family: 'Arial', sans-serif; /* Fuente elegante y legible */
+    max-width: 1200px; /* Ancho máximo para el contenido */
+    margin: auto; /* Centramos la sección */
+}
+
+#Intrduccion h1, #Intrduccion h2 {
+    color: #333; /* Color del texto */
+    text-align: center; /* Centramos los encabezados */
+}
+
+#Intrduccion h1 {
+    font-size: 36px; /* Tamaño de fuente del título principal */
+    margin-bottom: 20px; /* Espaciado inferior */
+}
+
+#Intrduccion h2 {
+    font-size: 28px; /* Tamaño de fuente del subtítulo */
+    margin-top: 40px; /* Espaciado superior */
+    margin-bottom: 20px; /* Espaciado inferior */
+}
+
+#Intrduccion p {
+    color: #555; /* Color del texto */
+    font-size: 18px; /* Tamaño de fuente del texto */
+    line-height: 1.6; /* Altura de línea para mejorar la legibilidad */
+    text-align: justify; /* Justificamos el texto */
+    margin-bottom: 20px; /* Espaciado inferior */
+}
+
+#Intrduccion .project {
+    padding: 20px; /* Espaciado dentro del contenedor */
+    background-color: #fff; /* Fondo blanco para el contenedor */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+#Intrduccion .project h1 {
+    font-size: 32px; /* Tamaño de fuente del título del proyecto */
+    margin-bottom: 20px; /* Espaciado inferior */
+}
+
+#Intrduccion .project p {
+    font-size: 16px; /* Tamaño de fuente del texto del proyecto */
+    margin-bottom: 10px; /* Espaciado inferior */
+}
+
+
+.section {
+    padding: 2rem 1rem;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h2 {
+    margin-top: 0;
+}
+
+.btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 1rem;
+}
+
+.project-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.project {
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 1rem;
+    flex: 1 1 calc(33.333% - 2rem);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 1rem;
+}
+
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    flex: 1;
+    margin: 10px;
+}
+
+.footer-section h2 {
+    margin-bottom: 10px;
+}
+
+.footer-section p {
+    margin: 5px 0;
+}
+
+.footer a {
+    color: #7AB2D3;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+
+.habilidad { list-style-type: none; padding: 0; }
+.habilidad li { background-color: #e7e7e7; margin: 10px 0; padding: 15px; border-left: 5px solid #007BFF; border-radius: 4px; transition: background-color 0.3s; color: #1A1A19; }
+.habilidad li:hover { background-color: #d7d7d7; }
+.habilidad li strong { color: #007BFF; }
+
+#Inscripcion {
+    text-align: center;
+    padding: 20px;
+}
+
+#Inscripcion .project-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#Inscripcion .project {
+    margin: 20px 0;
+}
+
+#Inscripcion .btn {
+    display: inline-block;
+    padding: 20px 40px; /* Aumenta el tamaño del botón */
+    background-color: #7AB2D3;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px; /* Aumenta el tamaño de la fuente */
+    width: 300px; /* Aumenta el ancho del botón */
+    transition: background-color 0.3s ease;
+}
+
+#Inscripcion .btn:hover {
+    background-color: #007BFF;
+}

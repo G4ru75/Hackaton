@@ -1,0 +1,146 @@
+header {
+    background-color: #f598bc;
+    color: white;
+    padding: 1rem 0;
+}
+.header {
+  display: flex;
+  align-items: center;
+  background-color: #f8b9cc; 
+  padding: 10px;
+}
+
+.logo {
+  height: 100px; 
+  margin-right: 1px; 
+}
+
+.header h1 {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: white; 
+}
+
+
+
+body{
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('niños.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+.section {
+            padding: 20px;
+        }
+
+.container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+.contenedor {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            color: rgb(3, 3, 3);
+            padding: 20px;
+            border-radius: 10px;
+        }
+.project-list {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+.project {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 48%; 
+            margin-bottom: 20px;
+        }
+
+.project img {
+            width: 400px; 
+            height: auto;
+            margin-bottom: 10px;
+            transition: transform 0.3s ease; 
+        }
+
+.project img:hover {
+            transform: scale(1.1); 
+        }
+
+.project-details {
+            text-align: center;
+        }
+
+@media (max-width: 768px) {
+            .project {
+                width: 100%;
+            }
+        }
+.btn {
+    background-color: #f598bc;
+    color: white;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 1rem;
+}
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    flex: 1;
+    margin: 10px;
+}
+
+.footer-section h2 {
+    margin-bottom: 10px;
+}
+
+.footer-section p {
+    margin: 5px 0;
+}
+
+.footer a {
+    color: #7AB2D3;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 2rem;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
