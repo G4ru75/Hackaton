@@ -5,11 +5,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Conexion -Donaciones para un Mejor Futuro</title>
     <link rel="stylesheet" href="Style.css">
+    <style>
+        /* Tu CSS aquí */
+        body{
+            margin: 0; padding: 0; font-family: Arial, sans-serif; background-image: url('niños.jpg'); /* Ruta a tu imagen de fondo */ background-size: cover; /* La imagen ocupa todo el tamaño de la página */ background-attachment: fixed; /* La imagen está fijada al fondo */ background-position: center; /* Centra la imagen */ background-repeat: no-repeat; /* No repite la imagen */
+        }
+        .section {
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .project-list {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .project {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 48%; /* Ajusta este valor según sea necesario */
+            margin-bottom: 20px;
+        }
+
+        .project img {
+            width: 400px; /* Ajusta este valor según sea necesario */
+            height: auto;
+            margin-bottom: 10px;
+            transition: transform 0.3s ease; /* Añade una transición suave */
+        }
+
+        .project img:hover {
+            transform: scale(1.1); /* Escala la imagen al pasar el mouse */
+        }
+
+        .project-details {
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .project {
+                width: 100%;
+            }
+        }
+            
+    </style>
 </head>
 <body>
     <header>
         <div class="container">
-            <h1>Donaciones para un Mejor Futuro</h1>
+            <h1>Pequeños Pasos, Grandes Cambios</h1>
             <nav>
                 <ul>
                     <li><a href="#about">Sobre Nosotros</a></li>
@@ -22,45 +72,85 @@
     </header>
     
     <main>
-        <section id="hero">
+        <section id="about" class="section">
+            <div class="container">
+                <h2>Sobre Nosotros</h2>
+                <p>Somos una organización dedicada al cuidado y bienestar de los niños. Nuestra misión es proporcionar un entorno seguro y enriquecedor donde los niños puedan crecer y desarrollarse plenamente. Con un equipo de profesionales comprometidos, ofrecemos programas educativos y recreativos que promueven el crecimiento físico, emocional y social de los niños. Creemos en la importancia de crear una comunidad inclusiva y solidaria donde cada niño tenga la oportunidad de prosperar.</p>                
+            </div>
+            <section id="mision-vision" class="section">
+                <div class="mision-vision-list">
+                    <div class="mision-vision">
+                        <h2>Misión</h2>
+                        <p>Nuestra misión es proporcionar un entorno seguro y enriquecedor para el desarrollo integral de los niños, promoviendo su bienestar físico, emocional y social a través de programas educativos y recreativos. Nos comprometemos a crear un entorno donde todos los niños se sientan protegidos y libres de cualquier tipo de peligro o abuso, fomentando la confianza y la seguridad en su entorno. Nos enfocamos en apoyar el crecimiento físico, mental y emocional de los niños, asegurando que cada uno tenga la oportunidad de alcanzar su máximo potencial. Esto incluye proporcionar acceso a servicios médicos, nutricionales y psicológicos esenciales, así como desarrollar programas educativos innovadores que estimulan el aprendizaje y la creatividad, adaptándose a las necesidades individuales de cada niño. Además, facilitamos espacios y actividades recreativas que permiten a los niños explorar, jugar y desarrollarse de manera saludable y equilibrada. Trabajamos de la mano con las familias para asegurarnos de que los niños reciban el apoyo necesario tanto en casa como en la comunidad.</p>
+                    </div>
+                    <div class="mision-vision">
+                        <h2>Vision</h2>
+                        <p>Nos esforzamos por ser una organización líder en el cuidado infantil, creando comunidades inclusivas y solidarias donde cada niño tenga la oportunidad de prosperar y alcanzar su máximo potencial. Visualizamos un futuro donde cada niño es valorado y respetado por su individualidad, recibiendo el amor y el apoyo que necesita para crecer. Creamos comunidades donde la diversidad es celebrada y todos los niños, independientemente de su origen, tienen acceso a las mismas oportunidades. Fomentamos un espíritu de colaboración y apoyo mutuo entre las familias y los miembros de la comunidad para construir un entorno más fuerte y unido. Trabajamos incansablemente para eliminar las barreras al acceso a la educación de calidad, asegurando que todos los niños puedan aprender y desarrollarse. Además, promovemos prácticas sostenibles que aseguran el bienestar de los niños a largo plazo, incluyendo proyectos de salud, medio ambiente y recursos comunitarios. Adoptamos enfoques y tecnologías innovadoras para mejorar continuamente nuestros programas y servicios, garantizando que los niños reciban el mejor cuidado posible.</p>
+                    </div>
+                </div>
+            </section>
+        </section>
+        
+        <section id="projects" class="section">
+            <div class="container">
+                <h2>Proyectos</h2>
+                <p>Descubre los proyectos que estamos apoyando y cómo tus donaciones están marcando la diferencia. Juntos, estamos creando un impacto positivo en nuestras comunidades.</p>
+                <div class="project-list">
+                    <div class="project">
+                        <h3>Educación para Todos</h3>
+                        <p>Proporcionamos recursos educativos a comunidades desfavorecidas, asegurando que todos los niños tengan acceso a una educación de calidad. Nuestros programas incluyen la distribución de libros, material escolar y acceso a tecnología avanzada, adaptados a las necesidades de cada niño. Creemos firmemente que la educación es la llave para un futuro mejor, permitiendo que los niños desarrollen sus habilidades, potencien su creatividad y alcancen sus sueños.</p>
+                        <img src="tecnologia.jpg" alt="Niños estudiando" style="width: 400px; height: auto; margin-bottom: 10px;">
+                    </div>
+                    <div class="project">
+                        <h3>Salud y Bienestar</h3>
+                        <p>Apoyamos clínicas móviles para llevar atención médica integral a áreas rurales, asegurando que los niños reciban la atención médica que necesitan, desde chequeos básicos hasta servicios especializados. Nuestra meta es mejorar la salud y el bienestar de todos los niños, proporcionando no solo cuidados médicos, sino también programas de nutrición y educación sobre salud para empoderarlos con el conocimiento de cuidar de sí mismos y de sus comunidades.</p>
+                        <img src="salud.jpeg" alt="Clínica móvil atendiendo a pacientes">
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        
+        <section id="donate">
             <div class="container">
                 <h2>Ayúdanos a Hacer la Diferencia</h2>
                 <p>Con tu apoyo, podemos cambiar vidas y construir un futuro mejor para todos.</p>
                 <a href="#donate" class="btn">Haz una Donación</a>
             </div>
         </section>
-        
-        <section id="about" class="section">
-            <div class="container">
-                <h2>Sobre Nosotros</h2>
-                <p>Somos una organización dedicada a conectar donantes con proyectos que necesitan financiamiento para impactar positivamente en comunidades alrededor del mundo. Desde salud y educación hasta desarrollo sostenible, nuestro objetivo es hacer que cada donación cuente.</p>
-            </div>
-        </section>
-        
-        <section id="projects" class="section">
-            <div class="container">
-                <h2>Proyectos</h2>
-                <p>Descubre los proyectos que estamos apoyando y cómo tus donaciones están marcando la diferencia.</p>
-                <div class="project-list">
-                    <div class="project">
-                        <h3>Educación para Todos</h3>
-                        <p>Proporcionamos recursos educativos a comunidades desfavorecidas.</p>
-                    </div>
-                    <div class="project">
-                        <h3>Salud y Bienestar</h3>
-                        <p>Apoyamos clínicas móviles para llevar atención médica a áreas rurales.</p>
-                    </div>
-                    <div class="project">
-                        <h3>Desarrollo Sostenible</h3>
-                        <p>Fomentamos proyectos de energía renovable y agricultura sostenible.</p>
-                    </div>
-                </div>
-            </div>
-        
+        <br>
+        <br>
+
     </main>
 
-    <footer>
-        <p>&copy; Todos los derechos reservados</p>
+    <footer id="contacto" class="footer"> 
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h2>Acerca de Nosotros</h2>
+                <p>Somos una organización dedicada a proporcionar educación y recursos esenciales a comunidades desfavorecidas, creando oportunidades de crecimiento y desarrollo sostenible.</p>
+            </div>
+            <div class="footer-section contact">
+                <h2>Contacto</h2>
+                <p>&copy; 2024 Mi Página Web. Todos los derechos reservados.</p>
+                <p>Correo Electrónico: <a href="mailto:sebastianfm738@gmail.com">sebastianfm738@gmail.com</a></p>
+                <p>Teléfono: +57 320 782 3313</p>
+                <p>Dirección: Calle Falsa 123, Valledupar, Colombia</p>
+            </div>
+            <div class="footer-section social">
+                <h2>Síguenos</h2>
+                <p>
+                    <a href="https://facebook.com/TuOrganizacion">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" width="30" height="30">
+                    </a>
+                    <a href="https://x.com/TuOrganizacion">
+                        <img src="logo_x.jpg" alt="X" width="30" height="30">
+                    </a>
+                    <a href="https://instagram.com/TuOrganizacion">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" width="30" height="30">
+                    </a>
+                </p>
+            </div>
+        </div>
     </footer>
 </body>
 </html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayudas humanitarias</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', sans-serif;
+            background-color: #e6f7ff; /* Light Cyan */
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 30px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #4682b4; /* Steel Blue */
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            font-weight: bold;
+            color: #2e8b57; /* Sea Green */
+        }
+        input, textarea, select {
+            width: 97%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input[type="submit"] {
+            background-color: #3cb371; /* Medium Sea Green */
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #2e8b57; /* Sea Green */
+        }
+        fieldset {
+            border: 1px solid #4682b4; /* Steel Blue */
+            border-radius: 8px;
+            padding: 10px;
+        }
+        legend {
+            color: #4682b4; /* Steel Blue */
+        }
+
+        /* Estilo para el GIF superpuesto */
+        #overlay {
+            display: none; /* Oculto por defecto */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro */
+            z-index: 9999;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #overlay img {
+            max-width: 80%;
+            max-height: 80%;
+        }
+
+        #form-container {
+            display: block;
+        }
+    </style>
+    <script>
+        function mostrarGif(event) {
+            event.preventDefault(); // Previene el envío del formulario y recarga de página
+
+            // Oculta el formulario
+            const formContainer = document.getElementById("form-container");
+            formContainer.style.display = "none";
+
+            // Muestra el GIF
+            const overlay = document.getElementById("overlay");
+            overlay.style.display = "flex";
+
+            // Simula el proceso y recarga la página después de mostrar el GIF
+            setTimeout(() => {
+                alert("Su donación ha sido exitosa. ¡Gracias por su generosidad!");
+                location.reload(); // Recarga la página
+            }, 3000); // 3 segundos
+        }
+    </script>
+</head>
+<body>
+    <!-- Contenedor del Formulario -->
+    <div class="container" id="form-container">
+        <h1>Formulario de Donaciones</h1>
+        <form onsubmit="mostrarGif(event)">
+            <fieldset>
+                <legend>Información Personal</legend>
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required placeholder="Escriba su nombre" minlength="4" maxlength="50" pattern="[A-Za-z\s]+">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required placeholder="Escriba su email">
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" id="telefono" name="telefono" required placeholder="Escriba su teléfono" pattern="[0-9]+">
+            </fieldset>
+
+            <fieldset>
+                <legend>Información de Donación</legend>
+                <label for="monto">Monto a Donar (en COP):</label>
+                <input type="number" id="monto" name="monto" placeholder="Escriba el monto" min="0">
+                <label for="metodo-pago">Método de Pago:</label>
+                <select id="metodo-pago" name="metodo-pago" required>
+                    <option value="">Seleccione un método de pago</option>
+                    <option value="tarjeta-credito">Tarjeta de Crédito</option>
+                    <option value="transferencia-bancaria">Transferencia Bancaria</option>
+                    <option value="paypal">PayPal</option>
+                </select>
+            </fieldset>
+
+            <fieldset>
+                <legend>Mensaje</legend>
+                <label for="mensaje">Mensaje para la Beneficencia:</label>
+                <textarea id="mensaje" name="mensaje" required placeholder="Escriba su mensaje" rows="4"></textarea>
+            </fieldset>
+
+            <input type="submit" value="Donar">
+        </form>
+    </div>
+
+    <!-- Contenedor del GIF -->
+    <div id="overlay">
+        <img src="gracias-thanks.gif" alt="Procesando donación...">
+    </div>
+    <footer id="contacto" class="footer"> 
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h2>Acerca de Nosotros</h2>
+                <p>Somos una organización dedicada a proporcionar educación y recursos esenciales a comunidades desfavorecidas, creando oportunidades de crecimiento y desarrollo sostenible.</p>
+            </div>
+            <div class="footer-section contact">
+                <h2>Contacto</h2>
+                <p>&copy; 2024 Mi Página Web. Todos los derechos reservados.</p>
+                <p>Correo Electrónico: <a href="mailto:sebastianfm738@gmail.com">sebastianfm738@gmail.com</a></p>
+                <p>Teléfono: +57 320 782 3313</p>
+                <p>Dirección: Calle Falsa 123, Valledupar, Colombia</p>
+            </div>
+            <div class="footer-section social">
+                <h2>Síguenos</h2>
+                <p>
+                    <a href="https://facebook.com/TuOrganizacion">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" width="30" height="30">
+                    </a>
+                    <a href="https://x.com/TuOrganizacion">
+                        <img src="logo_x.jpg" alt="X" width="30" height="30">
+                    </a>
+                    <a href="https://instagram.com/TuOrganizacion">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" width="30" height="30">
+                    </a>
+                </p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
